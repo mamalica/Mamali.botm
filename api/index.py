@@ -87,9 +87,9 @@ async def handle_video_from_admin(update: Update, context: ContextTypes.DEFAULT_
     save_videos(vids)
 
     link = f"https://t.me/Sexulogyi_bot?start={code}"
-    await update.message.reply_text(f"✅ ویدیو ذخیره شد!
-🔗 لینک اختصاصی:
-{link}")
+    await update.message.reply_text(
+    f"✅ ویدیو ذخیره شد!\n🔗 لینک اختصاصی:\n{link}"
+    )
 
     user_state[ADMIN_ID] = None
 
