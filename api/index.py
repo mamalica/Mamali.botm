@@ -54,8 +54,10 @@ async def admin_panel(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("❌ دسترسی فقط برای ادمین است.")
         return
     keyboard = [[InlineKeyboardButton("📤 آپلود ویدیو", callback_data="upload_video")]]
-    await update.message.reply_text("🔧 پنل ادمین:
-برای آپلود ویدیو کلیک کن:", reply_markup=InlineKeyboardMarkup(keyboard))
+    await update.message.reply_text(
+    "🔧 پنل ادمین:\nبرای آپلود ویدیو کلیک کن:",
+    reply_markup=InlineKeyboardMarkup(keyboard)
+)
 
 async def handle_admin_buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
